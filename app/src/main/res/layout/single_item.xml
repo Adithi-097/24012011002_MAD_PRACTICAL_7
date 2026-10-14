@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="#E0E3F4"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Profile Circle -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/img_profile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="12dp"
+                android:backgroundTint="#999999"
+                android:contentDescription="Profile"
+                app:fabCustomSize="56dp"
+                app:maxImageSize="28dp"
+                app:srcCompat="@drawable/person_24px"
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Contact Information -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/text_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/delete_btn"
+                app:layout_constraintStart_toEndOf="@id/img_profile"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/contact_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Yesenia Yang"
+                    android:textColor="#454545"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Phone -->
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="+91798335148"
+                    android:textColor="#555555"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/contact_name" />
+
+                <!-- Email -->
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="yesenia_yang@gnu.ac.in"
+                    android:textColor="#555555"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phone" />
+
+                <!-- Address -->
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="16 Sackett Street, Courtland, Michigan"
+                    android:textColor="#555555"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Delete Button -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/delete_btn"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#FF0074"
+                android:contentDescription="Delete"
+                app:fabCustomSize="52dp"
+                app:maxImageSize="24dp"
+                app:srcCompat="@drawable/auto_delete_24px"
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
